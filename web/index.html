@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ Online Compiler</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>C++ Online Compiler</h1>
+      <p>Compile and run C++20 code securely.</p>
+    </header>
+
+    <section class="controls">
+      <div class="field">
+        <label for="compileOptions">Compile options</label>
+        <input id="compileOptions" placeholder="e.g. -DDEBUG -Wall" />
+      </div>
+      <div class="field">
+        <label for="runToggle">Run after compile</label>
+        <input id="runToggle" type="checkbox" checked />
+      </div>
+    </section>
+
+    <section class="editor">
+      <textarea id="code" spellcheck="false"></textarea>
+      <textarea id="stdin" placeholder="Program input (stdin)..."></textarea>
+    </section>
+
+    <section class="actions">
+      <button id="runBtn">Compile & Run</button>
+      <button id="sampleBtn">Load Sample</button>
+    </section>
+
+    <section class="outputs">
+      <div class="panel">
+        <h3>Scanner</h3>
+        <pre id="scanOut"></pre>
+      </div>
+      <div class="panel">
+        <h3>Compile</h3>
+        <pre id="compileOut"></pre>
+      </div>
+      <div class="panel">
+        <h3>Run</h3>
+        <pre id="runOut"></pre>
+      </div>
+    </section>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

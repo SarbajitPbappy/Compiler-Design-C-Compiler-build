@@ -1,0 +1,22 @@
+services:
+  cpp-compiler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - UVICORN_WORKERS=1
+    restart: unless-stopped
+    mem_limit: 2g
+    cpus: 1.5
+    tmpfs:
+      - /tmp:exec,size=512m
+    security_opt:
+      - no-new-privileges:true
+    pids_limit: 512
+    ulimits:
+      nproc: 512
+      nofile:
+        soft: 8192
+        hard: 8192
